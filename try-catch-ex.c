@@ -1,6 +1,7 @@
 // gcc -o try-catch-ex try-catch.c try-catch-ex.c 
 #include <stdio.h>
 #include "try-catch.h"
+#include "rmalloc.h"
 
 // Example of use for try-catch.h
 int main(int argc, char *argv[])

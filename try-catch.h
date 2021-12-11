@@ -72,6 +72,4 @@ enum {
   }\
 } while(0)
 
-void * rmalloc(size_t const nbytes);  // malloc(nbytes) || RAISE(MALLOC_EXCEPTION)
-
 #endif

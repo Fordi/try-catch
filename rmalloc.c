@@ -1,4 +1,5 @@
-#include "try-catch.h"
+#include "rmalloc.h"
+
 jmp_buf * __TRY_CATCH_LIB__raise_env = NULL;
 jmp_buf * __TRY_CATCH_LIB__retry_env = NULL;
 
