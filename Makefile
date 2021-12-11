@@ -4,11 +4,11 @@ CC=gcc
 CFLAGS=-I.
 DEPS = try-catch.h
 
-%.o: %.c $(DEPS)
+build/%.o: %.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
-try-catch-ex: try-catch.o try-catch-ex.o
-	$(CC) -o try-catch-ex try-catch.o try-catch-ex.o 
+build/try-catch-ex: build/try-catch.o build/try-catch-ex.o
+	$(CC) -o build/try-catch-ex build/try-catch.o build/try-catch-ex.o 
 
 clean:
-	rm try-catch-ex *.o
+	rm build/*

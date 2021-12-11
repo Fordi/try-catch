@@ -3,7 +3,8 @@
 This repository contains macros to enable OO-like exception handling in C.
 
 It is shamelessly stolen from [rampion](https://gist.github.com/rampion/91594), with few changes -
-just a Makefile for the example, and the documentation moved into this README.
+just a Makefile for the example, and the documentation moved into this README.  Mostly because I
+want this tiny lib in my back pocket.
 
 ### RAISE(exception)
 
