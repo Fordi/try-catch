@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
       printf("before retry outside of catch block (i = %d)...\n", i);
       RETRY; // illegal, will RAISE exception
       printf("after raising outside of catch block...[ never run ]\n");
-  ) CATCH ( exception == RETRY_EXCEPTION,
+  ) EXCEPT (RETRY_EXCEPTION,
       printf("caught RETRY_EXCEPTION\n");
       // vim :let c_no_curly_error=1 | e
       if (i < 106) {
@@ -40,7 +40,17 @@ int main(int argc, char *argv[])
       }
   ) FINALLY ();
 
+  TRY (
+      TRY (
+          RETRY;
+      ) EXCEPT (MALLOC_EXCEPTION,
+        printf("will never be reached\n");
+      ) FINALLY ();
+  ) EXCEPT (RETRY_EXCEPTION,
+    printf("Caught a nested exception\n");
+  ) FINALLY ();
+
   printf("before raising outside of try block...\n");
   RAISE(1);
-  printf("after raising outside of try block...\n");
+  printf("after raising outside of try block... should not see this\n");
 }

@@ -72,6 +72,10 @@ The block will be run if:
 If the CATCH block raises an exception, it will be passed to the next TRY/CATCH/FINALLY block up
 the scope after the paired FINALLY block is called.
 
+### EXCEPT(ex, block)
+
+Shorthand for CATCH(exception == ex, block)
+
 ## rmalloc.c
 
 ### void* rmalloc(size_t const nbytes)

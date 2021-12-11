@@ -58,6 +58,8 @@ enum {
       }\
       else
 
+#define EXCEPT(ex, block) CATCH(exception == ex, block)
+
 #define FINALLY(block)\
       {\
         RAISE(exception);\
