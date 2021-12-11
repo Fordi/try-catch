@@ -81,3 +81,8 @@ Convenience method to allocate nbytes.
 returns a pointer to the allocated memory; RAISE's a MALLOC_EXCEPTION (0x80000000) if the memory
 is not allocated, so it is not necessary to check the return value.
 
+## Building the example
+
+```bash
+make
+```

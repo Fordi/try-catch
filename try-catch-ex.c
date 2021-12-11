@@ -1,4 +1,3 @@
-// gcc -o try-catch-ex try-catch.c try-catch-ex.c 
 #include <stdio.h>
 #include "try-catch.h"
 #include "rmalloc.h"
