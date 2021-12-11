@@ -6,6 +6,8 @@ It is shamelessly stolen from [rampion](https://gist.github.com/rampion/91594), 
 just a Makefile for the example, and the documentation moved into this README.  Mostly because I
 want this tiny lib in my back pocket.
 
+## try-catch.h
+
 ### RAISE(exception)
 
 When below a TRY block in the call stack, pass the given exception code to the paired CATCH blocks.
@@ -69,6 +71,8 @@ The block will be run if:
 
 If the CATCH block raises an exception, it will be passed to the next TRY/CATCH/FINALLY block up
 the scope after the paired FINALLY block is called.
+
+## rmalloc.c
 
 ### void* rmalloc(size_t const nbytes)
 
